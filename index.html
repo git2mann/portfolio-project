@@ -1,15 +1,101 @@
-<!-- Example Change in index.html -->
-<section id="about">
-    <h2>About Me</h2>
-    <p>Hi, I'm [Your Name], a web developer and musician. Welcome to my portfolio!</p>
-</section>
+<!DOCTYPE html>
+<html lang="en">
 
-<section id="projects">
-    <h2>My Projects</h2>
-    <div class="project">
-        <h3>Project 1: Web App</h3>
-        <p>Description of the project.</p>
-        <a href="https://github.com/yourgithub/project1">View on GitHub</a>
-    </div>
-    <!-- Add more projects -->
-</section>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Leon Nduati's Portfolio - Showcasing my coding, music, and blog work.">
+    <title>Leon Nduati | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#home">Leon Nduati</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to My Portfolio</h1>
+            <p>I’m Leon Nduati, a passionate developer, musician, and writer.</p>
+            <a href="#projects" class="cta-button">Explore My Work</a>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="section">
+        <div class="section-content">
+            <h2>About Me</h2>
+            <p>I am a web developer, composer, and writer. I create innovative web applications, compose music, and share my thoughts on technology and creativity. This portfolio showcases my work in all of these fields.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="section-content">
+            <h2>My Projects</h2>
+
+            <div class="projects-grid">
+                <!-- Coding Projects -->
+                <div class="project-item">
+                    <h3>Web App Project</h3>
+                    <p>A modern web application built with HTML, CSS, and JavaScript. <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a></p>
+                </div>
+
+                <!-- Music Projects -->
+                <div class="project-item">
+                    <h3>Track: "Harmony"</h3>
+                    <p>An instrumental track composed using FL Studio. <a href="https://soundcloud.com/yourusername/harmony" target="_blank">Listen on SoundCloud</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section">
+        <div class="section-content">
+            <h2>Blog</h2>
+            <div class="blog-posts">
+                <div class="post-item">
+                    <h3><a href="/blog/post1.html">How I Built My Portfolio</a></h3>
+                    <p>Learn how I built this portfolio from scratch, using GitHub Pages and Vercel.</p>
+                </div>
+                <div class="post-item">
+                    <h3><a href="/blog/post2.html">Tips for Web Development Beginners</a></h3>
+                    <p>Starting out in web development? Here are some tips that helped me along the way.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="section-content">
+            <h2>Contact</h2>
+            <p>Interested in collaborating? Feel free to get in touch!</p>
+            <p>Email: <a href="mailto:leon@example.com">leon@example.com</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Leon Nduati. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
