@@ -1,14 +1,13 @@
 // script.js
+// Smooth scrolling for navigation links
 document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-
         const targetId = this.getAttribute('href').substring(1);
         const targetElement = document.getElementById(targetId);
-
         if (targetElement) {
             window.scrollTo({
-                top: targetElement.offsetTop,
+                top: targetElement.offsetTop - 80, // Adjust for header height
                 behavior: 'smooth'
             });
         }
@@ -39,9 +38,14 @@ projects.forEach(project => {
     projectDiv.classList.add('project');
     projectDiv.innerHTML = `
         <img src="${project.image}" alt="${project.title}">
-        <h3>${project.title}</h3>
-        <p>${project.description}</p>
-        <a href="${project.link}">View Project</a>
+        <div class="project-content">
+            <h3>${project.title}</h3>
+            <p>${project.description}</p>
+            <a href="${project.link}">View Project</a>
+        </div>
     `;
     projectsGrid.appendChild(projectDiv);
 });
+
+// Dynamic year in footer
+document.getElementById('year').textContent = new Date().getFullYear();
