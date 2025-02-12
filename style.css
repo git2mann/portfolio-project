@@ -57,6 +57,13 @@ header .nav-links li a:hover {
     text-align: center;
 }
 
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .hero h1 {
     font-size: 3rem;
     color: #fff;
@@ -86,6 +93,12 @@ header .nav-links li a:hover {
     text-align: center;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
 .section h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
@@ -98,10 +111,10 @@ header .nav-links li a:hover {
     margin: 0 auto 2rem;
 }
 
-/* Projects */
+/* Projects Section */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
 }
@@ -132,7 +145,7 @@ header .nav-links li a:hover {
     color: #333;
 }
 
-/* Blog */
+/* Blog Section */
 .blog-posts {
     display: flex;
     flex-direction: column;
@@ -149,12 +162,7 @@ header .nav-links li a:hover {
     color: #666;
 }
 
-/* Contact */
-#contact a {
-    color: #61dafb;
-    text-decoration: underline;
-}
-
+/* Footer */
 footer {
     background-color: #333;
     color: white;
