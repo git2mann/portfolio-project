@@ -1,29 +1,18 @@
-// Smooth scrolling
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+// script.js (Optional - Add JavaScript for interactivity)
+
+// Example: Smooth scrolling for navigation links
+document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
+
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: 'smooth'
+            });
         }
     });
-});
-
-// Dark Mode Toggle
-const darkModeToggle = document.getElementById("darkModeToggle");
-if (localStorage.getItem("darkMode") === "enabled") {
-    document.body.classList.add("dark-mode");
-}
-
-darkModeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-    localStorage.setItem("darkMode", document.body.classList.contains("dark-mode") ? "enabled" : "disabled");
-});
-
-// Mobile Menu Toggle
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
-
-menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
 });
