@@ -7,10 +7,20 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- Dark Mode Toggle -->
+    <button id="dark-mode-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <header>
         <div class="container">
             <a href="#" class="logo">Your Initials/Logo</a>
@@ -25,20 +35,22 @@
     </header>
 
     <main>
+        <!-- Hero Section with Typewriter Effect -->
         <section id="hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1>Hi, I'm Your Name</h1>
+                    <h1>Hi, I'm <span class="typewriter"></span></h1>
                     <h2>A Creative Developer & Designer</h2>
                 </div>
             </div>
         </section>
 
+        <!-- About Section -->
         <section id="about">
             <div class="container">
                 <h2>About Me</h2>
                 <div class="about-content">
-                    <img src="placeholder-profile.jpg" alt="Your Name - Profile Photo">
+                    <img src="placeholder-profile.jpg" alt="Your Name - Profile Photo" loading="lazy">
                     <p>Write a compelling and concise description of yourself. Focus on your skills, experience, and what makes you unique. What are your career goals? What problems do you solve?</p>
                 </div>
                 <div class="skills">
@@ -52,6 +64,7 @@
             </div>
         </section>
 
+        <!-- Projects Section -->
         <section id="projects">
             <div class="container">
                 <h2>Projects</h2>
@@ -59,6 +72,7 @@
             </div>
         </section>
 
+        <!-- Contact Section -->
         <section id="contact">
             <div class="container">
                 <h2>Contact</h2>
@@ -72,6 +86,7 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; <span id="year"></span> Your Name</p>
