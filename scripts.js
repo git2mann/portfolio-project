@@ -14,6 +14,53 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 
+// Dark Mode Toggle
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+darkModeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    darkModeToggle.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+    localStorage.setItem('darkMode', isDarkMode);
+});
+
+// Check for saved dark mode preference
+if (localStorage.getItem('darkMode') === 'true') {
+    document.body.classList.add('dark-mode');
+    darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+}
+
+// Scroll to Top Button
+const scrollToTopButton = document.getElementById('scroll-to-top');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        scrollToTopButton.style.display = 'flex';
+    } else {
+        scrollToTopButton.style.display = 'none';
+    }
+});
+
+scrollToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+// Typewriter Effect
+const typewriterElement = document.querySelector('.typewriter');
+const text = "Your Name";
+let index = 0;
+
+function typeWriter() {
+    if (index < text.length) {
+        typewriterElement.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 100);
+    }
+}
+
+typeWriter();
+
 // Add Project Data (replace with your actual project data)
 const projects = [
     {
@@ -37,7 +84,7 @@ projects.forEach(project => {
     const projectDiv = document.createElement('div');
     projectDiv.classList.add('project');
     projectDiv.innerHTML = `
-        <img src="${project.image}" alt="${project.title}">
+        <img src="${project.image}" alt="${project.title}" loading="lazy">
         <div class="project-content">
             <h3>${project.title}</h3>
             <p>${project.description}</p>
