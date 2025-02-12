@@ -16,18 +16,24 @@ document.querySelectorAll('nav a').forEach(anchor => {
 
 // Dark Mode Toggle
 const darkModeToggle = document.getElementById('dark-mode-toggle');
+const body = document.body;
+
+// Check for saved dark mode preference
+const savedDarkMode = localStorage.getItem('darkMode') === 'true';
+if (savedDarkMode) {
+    body.classList.add('dark-mode');
+    darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>'; // Sun icon for dark mode
+} else {
+    darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>'; // Moon icon for light mode
+}
+
+// Toggle dark mode
 darkModeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    const isDarkMode = document.body.classList.contains('dark-mode');
+    body.classList.toggle('dark-mode');
+    const isDarkMode = body.classList.contains('dark-mode');
     darkModeToggle.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
     localStorage.setItem('darkMode', isDarkMode);
 });
-
-// Check for saved dark mode preference
-if (localStorage.getItem('darkMode') === 'true') {
-    document.body.classList.add('dark-mode');
-    darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-}
 
 // Scroll to Top Button
 const scrollToTopButton = document.getElementById('scroll-to-top');
