@@ -23,6 +23,72 @@ function typeWriter() {
     }
 }
 
+<div class="post-card">
+    <h3>Post Title</h3>
+    <p class="post-date">Posted on <span class="date"></span></p>
+    <p class="post-content">This is a placeholder text for your blog post content.</p>
+</div>
+
+// Initialize an empty array for blog posts
+let blogPosts = [
+    {
+        title: "My First Blog Post",
+        content: "This is the content of my very first blog post. Welcome to my blog!",
+        date: new Date().toLocaleDateString(),
+    },
+    {
+        title: "Exploring Web Development",
+        content: "Web development is a broad field, ranging from front-end to back-end technologies. Let's dive deeper into it.",
+        date: new Date().toLocaleDateString(),
+    },
+];
+
+// Function to display blog posts
+function displayBlogPosts() {
+    const blogContainer = document.getElementById("blog-posts");
+    blogContainer.innerHTML = ""; // Clear any existing content
+
+    blogPosts.forEach((post) => {
+        const postCard = document.createElement("div");
+        postCard.classList.add("post-card");
+
+        const postTitle = document.createElement("h3");
+        postTitle.innerText = post.title;
+        postCard.appendChild(postTitle);
+
+        const postDate = document.createElement("p");
+        postDate.classList.add("post-date");
+        postDate.innerHTML = `Posted on <span class="date">${post.date}</span>`;
+        postCard.appendChild(postDate);
+
+        const postContent = document.createElement("p");
+        postContent.classList.add("post-content");
+        postContent.innerText = post.content;
+        postCard.appendChild(postContent);
+
+        blogContainer.appendChild(postCard);
+    });
+}
+
+// Function to add a new blog post
+function addNewPost() {
+    // Simulating adding a post (you can create a form for real dynamic input)
+    const newPost = {
+        title: "New Blog Post",
+        content: "This is a new blog post added dynamically.",
+        date: new Date().toLocaleDateString(),
+    };
+
+    blogPosts.push(newPost);
+    displayBlogPosts(); // Re-render posts
+}
+
+// Event listener to add a new post when the button is clicked
+document.getElementById("add-post-btn").addEventListener("click", addNewPost);
+
+// Display blog posts when the page loads
+window.onload = displayBlogPosts;
+
 // Load Projects
 const projects = [
     {
