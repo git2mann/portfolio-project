@@ -1,115 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leon Nduati - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <!-- Scroll to Top Button -->
-    <button id="scroll-to-top" aria-label="Scroll to top" class="icon-btn">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+  <header>
+    <h1>Welcome to My Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <header>
-        <div class="container">
-            <a href="#" class="logo">Leon Nduati</a>
-            <nav>
-                <ul>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi! I'm a developer, musician, and artist. This is my portfolio where I showcase my work.</p>
+    <img src="assets/images/profile.jpg" alt="Profile Picture" width="150">
+  </section>
 
-    <main>
-        <!-- Hero Section with Typewriter Effect -->
-        <section id="hero">
-            <div class="container hero-content">
-                <h1>Hi, I'm Leon Nduati.<span class="typewriter"></span></h1>
-                <h2>A Creative Developer & Designer</h2>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about">
-            <div class="container about-content">
-                <div class="bio">
-                    <h2>About Me</h2>
-                    <img src="placeholder-profile.jpg" alt="Profile Photo of Leon Nduati" loading="lazy">
-                    <p>I'm a passionate developer and designer with a focus on front-end technologies, UI/UX design, and bringing creative ideas to life. I specialize in HTML, CSS, and JavaScript, and enjoy building responsive websites and web applications.</p>
-                </div>
-
-                <div class="skills">
-                    <h3>Skills</h3>
-                    <ul>
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                        <li>JavaScript</li>
-                        <li>React</li>
-                        <li>UI/UX Design</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Blog Section -->
-<section id="blog">
-    <div class="container">
-        <h2>Blog</h2>
-        <div id="blog-posts">
-            <!-- Blog posts will be dynamically injected here -->
-        </div>
-        <button id="add-post-btn">Add New Post</button>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Code Project: To-Do App</h3>
+      <p>A simple to-do app built with HTML, CSS, and JavaScript.</p>
+      <a href="https://github.com/yourusername/todo-app" target="_blank">View Code</a>
     </div>
-</section>
+    <div class="project">
+      <h3>Music: My Latest Track</h3>
+      <p>Listen to my latest music track.</p>
+      <audio controls>
+        <source src="assets/music/track.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <div class="project">
+      <h3>Art: Digital Painting</h3>
+      <p>Check out my latest digital art piece.</p>
+      <img src="assets/art/painting.jpg" alt="Digital Painting" width="300">
+    </div>
+  </section>
 
-        <!-- Projects Section -->
-        <section id="projects">
-            <div class="container">
-                <h2>Projects</h2>
-                <div class="projects-grid">
-                    <!-- Example project card -->
-                    <div class="project-card">
-                        <img src="project-image.jpg" alt="Project Thumbnail" loading="lazy">
-                        <h3>Project Title</h3>
-                        <p>A brief description of the project. Focus on the technologies used and what it accomplished.</p>
-                        <a href="#" class="btn">View Project</a>
-                    </div>
-                    <!-- More project cards can be dynamically added here -->
-                </div>
-            </div>
-        </section>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      
+      <button type="submit">Send</button>
+    </form>
+    <p id="form-status"></p>
+  </section>
 
-        <!-- Contact Section -->
-        <section id="contact">
-            <div class="container">
-                <h2>Contact</h2>
-                <p>Feel free to reach out for collaborations, projects, or just a friendly chat!</p>
-                <ul class="contact-links">
-                    <li><a href="mailto:nduatileon@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i> Email</a></li>
-                    <li><a href="https://www.linkedin.com/in/leonnduati/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-                    <li><a href="https://github.com/git2mann" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a></li>
-                </ul>
-            </div>
-        </section>
-    </main>
+  <footer>
+    <p>&copy; 2023 Your Name. All rights reserved.</p>
+  </footer>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; <span id="year"></span> Leon Nduati</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
