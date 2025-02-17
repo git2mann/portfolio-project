@@ -238,6 +238,72 @@ footer {
     right: 80px;
 }
 
+/* Blog Section */
+#blog {
+    padding: 6rem 0;
+    background-color: var(--background-light);
+    transition: background-color 0.3s ease;
+}
+
+body.dark-mode #blog {
+    background-color: var(--background-dark);
+}
+
+#blog h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+#blog-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.post-card {
+    background-color: var(--background-light);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: background-color 0.3s ease;
+}
+
+body.dark-mode .post-card {
+    background-color: #444;
+}
+
+.post-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.post-card .post-date {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.post-card .post-content {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+#add-post-btn {
+    display: block;
+    margin: 2rem auto;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#add-post-btn:hover {
+    background-color: #0056b3;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .about-content {
