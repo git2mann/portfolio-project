@@ -3,33 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <title>Leon Nduati - Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
-    <script src="scripts.js"></script>
 </head>
 <body>
     <!-- Dark Mode Toggle -->
-    <button id="dark-mode-toggle" aria-label="Toggle dark mode">
+    <button id="dark-mode-toggle" aria-label="Toggle dark mode" class="icon-btn">
         <i class="fas fa-moon"></i>
     </button>
 
     <!-- Scroll to Top Button -->
-    <button id="scroll-to-top" aria-label="Scroll to top">
+    <button id="scroll-to-top" aria-label="Scroll to top" class="icon-btn">
         <i class="fas fa-arrow-up"></i>
     </button>
 
     <header>
         <div class="container">
-            <a href="#" class="logo">Your Initials/Logo</a>
+            <a href="#" class="logo">Leon Nduati</a>
             <nav>
                 <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -38,28 +37,29 @@
     <main>
         <!-- Hero Section with Typewriter Effect -->
         <section id="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Hi, I'm Leon Nduati.<span class="typewriter"></span></h1>
-                    <h2>A Creative Developer & Designer</h2>
-                </div>
+            <div class="container hero-content">
+                <h1>Hi, I'm Leon Nduati.<span class="typewriter"></span></h1>
+                <h2>A Creative Developer & Designer</h2>
             </div>
         </section>
 
         <!-- About Section -->
         <section id="about">
-            <div class="container">
-                <h2>About Me</h2>
-                <div class="about-content">
-                    <img src="placeholder-profile.jpg" alt="Your Name - Profile Photo" loading="lazy">
-                    <p>Write a compelling and concise description of yourself. Focus on your skills, experience, and what makes you unique. What are your career goals? What problems do you solve?</p>
+            <div class="container about-content">
+                <div class="bio">
+                    <h2>About Me</h2>
+                    <img src="placeholder-profile.jpg" alt="Profile Photo of Leon Nduati" loading="lazy">
+                    <p>I'm a passionate developer and designer with a focus on front-end technologies, UI/UX design, and bringing creative ideas to life. I specialize in HTML, CSS, and JavaScript, and enjoy building responsive websites and web applications.</p>
                 </div>
+
                 <div class="skills">
                     <h3>Skills</h3>
                     <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
                         <li>JavaScript</li>
+                        <li>React</li>
+                        <li>UI/UX Design</li>
                     </ul>
                 </div>
             </div>
@@ -69,7 +69,16 @@
         <section id="projects">
             <div class="container">
                 <h2>Projects</h2>
-                <div class="projects-grid"></div>
+                <div class="projects-grid">
+                    <!-- Example project card -->
+                    <div class="project-card">
+                        <img src="project-image.jpg" alt="Project Thumbnail" loading="lazy">
+                        <h3>Project Title</h3>
+                        <p>A brief description of the project. Focus on the technologies used and what it accomplished.</p>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
+                    <!-- More project cards can be dynamically added here -->
+                </div>
             </div>
         </section>
 
@@ -77,9 +86,9 @@
         <section id="contact">
             <div class="container">
                 <h2>Contact</h2>
-                <p>Feel free to reach out!</p>
+                <p>Feel free to reach out for collaborations, projects, or just a friendly chat!</p>
                 <ul class="contact-links">
-                    <li><a href="mailto:nduatileon@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i> nduatileon@gmail.com</a></li>
+                    <li><a href="mailto:nduatileon@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i> Email</a></li>
                     <li><a href="https://www.linkedin.com/in/leonnduati/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
                     <li><a href="https://github.com/git2mann" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a></li>
                 </ul>
