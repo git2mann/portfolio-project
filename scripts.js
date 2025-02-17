@@ -1,8 +1,3 @@
-// script.js
-const darkModeToggle = document.getElementById("dark-mode-toggle");
-const darkModeIcon = darkModeToggle.querySelector("i");
-const scrollToTopButton = document.getElementById("scroll-to-top");
-
 // Dark Mode Toggle
 darkModeToggle.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
@@ -13,19 +8,6 @@ darkModeToggle.addEventListener("click", () => {
         darkModeIcon.classList.remove("fa-sun");
         darkModeIcon.classList.add("fa-moon");
     }
-});
-
-// Scroll to Top Button
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-        scrollToTopButton.style.display = "flex";
-    } else {
-        scrollToTopButton.style.display = "none";
-    }
-});
-
-scrollToTopButton.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 // Typewriter Effect
