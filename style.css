@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #3f9bde; /* Soft blue for links and highlights */
+    --primary-color: #3f9bde;
     --background-light: #ffffff;
     --background-dark: #1e1e1e;
     --text-light: #333;
@@ -259,49 +259,53 @@ body.dark-mode #blog {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .post-card {
     background-color: var(--background-light);
-    padding: 20px;
-    border-radius: 8px;
+    padding: 2rem;
+    border-radius: 12px;
     box-shadow: var(--shadow);
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 body.dark-mode .post-card {
-    background-color: #444;
+    background-color: #2d2d2d;
 }
 
 .post-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+    color: var(--primary-color);
 }
 
 .post-card .post-date {
     color: #777;
     font-size: 0.9rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+body.dark-mode .post-card .post-date {
+    color: #aaa;
 }
 
 .post-card .post-content {
-    font-size: 1rem;
-    margin-top: 10px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+    color: var(--text-light);
 }
 
-#add-post-btn {
-    display: block;
-    margin: 2rem auto;
-    padding: 10px 20px;
-    background-color: var(--primary-color);
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#add-post-btn:hover {
-    background-color: #0056b3;
+body.dark-mode .post-card .post-content {
+    color: var(--text-dark);
 }
 
 /* Responsive Design */
@@ -330,5 +334,17 @@ body.dark-mode .post-card {
     .contact-links {
         flex-direction: column;
         gap: 10px;
+    }
+
+    .post-card {
+        padding: 1.5rem;
+    }
+
+    .post-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .post-card .post-content {
+        font-size: 1rem;
     }
 }
