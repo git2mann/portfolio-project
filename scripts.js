@@ -1,133 +1,117 @@
-// Dark Mode Toggle
-darkModeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-    if (document.body.classList.contains("dark-mode")) {
-        darkModeIcon.classList.remove("fa-moon");
-        darkModeIcon.classList.add("fa-sun");
-    } else {
-        darkModeIcon.classList.remove("fa-sun");
-        darkModeIcon.classList.add("fa-moon");
-    }
-});
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leon Nduati - Portfolio</title>
+    
+    <!-- Add the favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" aria-label="Scroll to top" class="icon-btn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-// Typewriter Effect
-const typewriterText = "Creative Developer & Designer";
-let index = 0;
-const typewriterElement = document.querySelector(".typewriter");
+    <header>
+        <div class="container">
+            <a href="#" class="logo">Leon Nduati</a>
+            <nav>
+                <ul>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-function typeWriter() {
-    if (index < typewriterText.length) {
-        typewriterElement.innerHTML += typewriterText.charAt(index);
-        index++;
-        setTimeout(typeWriter, 100);
-    }
-}
+    <main>
+        <!-- Hero Section with Typewriter Effect -->
+        <section id="hero">
+            <div class="container hero-content">
+                <h1>Hi, I'm Leon Nduati.<span class="typewriter"></span></h1>
+                <h2>A Creative Developer & Designer</h2>
+            </div>
+        </section>
 
-// Initialize blog posts with content
-const blogPosts = [
-    {
-        title: "The Journey of a Web Developer",
-        content: "Starting my journey as a web developer has been both challenging and rewarding. From learning the basics of HTML and CSS to diving deep into JavaScript frameworks, every step has taught me something valuable. Here's what I've learned along the way...",
-        date: "2023-12-15"
-    },
-    {
-        title: "UI/UX Design Principles Every Developer Should Know",
-        content: "As developers, we often focus on functionality, but understanding UI/UX principles is crucial. Here are five essential design principles that have helped me create better user experiences: 1. Keep it simple 2. Maintain consistency 3. Provide feedback 4. Make it accessible 5. Focus on user needs.",
-        date: "2023-12-20"
-    },
-    {
-        title: "Building Responsive Websites: Best Practices",
-        content: "In today's mobile-first world, creating responsive websites is more important than ever. Here are some key practices I follow: using flexible grids, implementing responsive images, testing across devices, and employing CSS media queries effectively.",
-        date: "2024-01-05"
-    },
-    {
-        title: "The Power of JavaScript ES6+",
-        content: "Modern JavaScript has transformed how we write code. Features like arrow functions, destructuring, async/await, and modules have made our code more readable and maintainable. Let's explore some practical examples of these features in action.",
-        date: "2024-01-15"
-    },
-    {
-        title: "My Creative Process in Web Development",
-        content: "Every project starts with understanding the client's needs and sketching out ideas. I believe in prototyping early, getting feedback often, and iterating quickly. This approach has helped me deliver better results and maintain strong client relationships.",
-        date: "2024-01-25"
-    }
-];
+        <!-- About Section -->
+        <section id="about">
+            <div class="container about-content">
+                <div class="bio">
+                    <h2>About Me</h2>
+                    <img src="IMG_7908.PNG" alt="Profile Photo of Leon Nduati" loading="lazy">
+                    <p>I'm a passionate developer and designer with a focus on front-end technologies, UI/UX design, and bringing creative ideas to life. I specialize in HTML, CSS, and JavaScript, and enjoy building responsive websites and web applications.</p>
+                </div>
 
-// Function to format date
-function formatDate(dateString) {
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    return new Date(dateString).toLocaleDateString('en-US', options);
-}
+                <div class="skills">
+                    <h3>Skills</h3>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>UI/UX Design</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-// Function to display blog posts
-function displayBlogPosts() {
-    const blogContainer = document.getElementById("blog-posts");
-    blogContainer.innerHTML = ""; // Clear any existing content
+        <!-- Blog Section -->
+        <section id="blog">
+            <div class="container">
+                <h2>Blog</h2>
+                <div id="blog-posts">
+                    <!-- Blog posts will be dynamically injected here -->
+                </div>
+            </div>
+        </section>
 
-    blogPosts.forEach((post) => {
-        const postCard = document.createElement("div");
-        postCard.classList.add("post-card");
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    <!-- Example project card -->
+                    <div class="project-card">
+                        <img src="project-image.jpg" alt="Project Thumbnail" loading="lazy">
+                        <h3>Project Title</h3>
+                        <p>A brief description of the project. Focus on the technologies used and what it accomplished.</p>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
+                    <!-- More project cards can be dynamically added here -->
+                </div>
+            </div>
+        </section>
 
-        const postTitle = document.createElement("h3");
-        postTitle.innerText = post.title;
-        postCard.appendChild(postTitle);
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <h2>Contact</h2>
+                <p>Feel free to reach out for collaborations, projects, or just a friendly chat!</p>
+                <ul class="contact-links">
+                    <li><a href="mailto:nduatileon@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i> Email</a></li>
+                    <li><a href="https://www.linkedin.com/in/leonnduati/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                    <li><a href="https://github.com/git2mann" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
 
-        const postDate = document.createElement("p");
-        postDate.classList.add("post-date");
-        postDate.innerHTML = `Posted on <span class="date">${formatDate(post.date)}</span>`;
-        postCard.appendChild(postDate);
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> Leon Nduati</p>
+        </div>
+    </footer>
 
-        const postContent = document.createElement("p");
-        postContent.classList.add("post-content");
-        postContent.innerText = post.content;
-        postCard.appendChild(postContent);
-
-        blogContainer.appendChild(postCard);
-    });
-}
-
-// Load Projects
-const projects = [
-    {
-        title: "Project 1",
-        description: "A brief description of Project 1.",
-        image: "project1.jpg",
-        link: "#"
-    },
-    {
-        title: "Project 2",
-        description: "A brief description of Project 2.",
-        image: "project2.jpg",
-        link: "#"
-    },
-    {
-        title: "Project 3",
-        description: "A brief description of Project 3.",
-        image: "project3.jpg",
-        link: "#"
-    }
-];
-
-const projectsGrid = document.querySelector(".projects-grid");
-
-function loadProjects() {
-    projects.forEach(project => {
-        const projectCard = document.createElement("div");
-        projectCard.classList.add("project");
-
-        projectCard.innerHTML = `
-            <img src="${project.image}" alt="${project.title}" loading="lazy">
-            <h3>${project.title}</h3>
-            <p>${project.description}</p>
-            <a href="${project.link}" target="_blank">View Project</a>
-        `;
-        projectsGrid.appendChild(projectCard);
-    });
-}
-
-// On Load
-window.onload = () => {
-    typeWriter();
-    loadProjects();
-    displayBlogPosts();
-    document.getElementById("year").textContent = new Date().getFullYear();
-};
+    <script src="script.js"></script>
+</body>
+</html>
